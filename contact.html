@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Wash&Go — Get in touch by phone, email, WhatsApp, or our contact form." />
+  <title>Contact Us | Wash&Go</title>
+  <link rel="stylesheet" href="globals.css" />
+</head>
+<body>
+<div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+<header class="nav" role="banner">
+  <div class="container">
+    <nav class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="#0d6db5"/><path d="M14 32c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/><path d="M18 36c2-4 7-6 12-6s10 2 12 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M30 16v-5M20 20l-3-4M40 20l3-4" stroke="#4fb3f7" stroke-width="2" stroke-linecap="round"/><ellipse cx="30" cy="38" rx="10" ry="5" fill="#1a8fe3" opacity=".4"/><circle cx="30" cy="38" r="3" fill="white" opacity=".9"/></svg>
+        Wash<span style="color:var(--clr-accent)">&</span>Go
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="house-cleaning.html" class="nav__link">House Cleaning</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="faq.html" class="nav__link">FAQ</a></li>
+        <li><a href="contact.html" class="nav__link is-active">Contact</a></li>
+      </ul>
+      <div class="nav__cta"><a href="booking.html" class="btn btn--primary btn--sm">Book Now</a></div>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+  <nav class="nav__mobile-menu" id="mobile-menu">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="services.html" class="nav__mobile-link">Car Detailing</a>
+    <a href="house-cleaning.html" class="nav__mobile-link">House Cleaning</a>
+    <a href="pricing.html" class="nav__mobile-link">Pricing</a>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="faq.html" class="nav__mobile-link">FAQ</a>
+    <a href="contact.html" class="nav__mobile-link">Contact</a>
+    <div style="padding-top:var(--space-6)"><a href="booking.html" class="btn btn--primary btn--lg">Book Now</a></div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="page-hero__breadcrumb-sep">›</span>
+        <span aria-current="page">Contact</span>
+      </nav>
+      <div class="section-label reveal" style="justify-content:center">Get in Touch</div>
+      <h1 class="section-title reveal delay-100" style="text-align:center">We'd Love to <span>Hear From You</span></h1>
+      <p class="section-subtitle reveal delay-200" style="margin-inline:auto;text-align:center">Whether you have a question, need advice on the right service, or want to book — we're ready to help.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="page-grid page-grid--contact">
+
+        <!-- Contact Form -->
+        <div class="reveal">
+          <div class="card" style="padding:var(--space-10)">
+            <h2 style="font-size:var(--fs-xl);margin-bottom:var(--space-2)">Send Us a Message</h2>
+            <p style="color:var(--clr-text-muted);font-size:var(--fs-sm);margin-bottom:var(--space-8)">We respond to all messages within a few hours during business hours.</p>
+
+            <form class="booking-form" novalidate aria-label="Contact form">
+              <div class="form-grid" style="margin-bottom:var(--space-5)">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Full Name *</label>
+                  <input class="form-input" type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name" data-validate="required" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-phone">Phone Number</label>
+                  <input class="form-input" type="tel" id="contact-phone" name="phone" placeholder="+254 7XX XXX XXX" autocomplete="tel" />
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom:var(--space-5)">
+                <label class="form-label" for="contact-email">Email Address *</label>
+                <input class="form-input" type="email" id="contact-email" name="email" placeholder="you@example.com" autocomplete="email" data-validate="required,email" required />
+              </div>
+              <div class="form-group" style="margin-bottom:var(--space-5)">
+                <label class="form-label" for="contact-subject">Subject</label>
+                <select class="form-select" id="contact-subject" name="subject">
+                  <option value="" disabled selected>What's this about?</option>
+                  <option value="booking">Booking a service</option>
+                  <option value="quote">Get a quote</option>
+                  <option value="ceramic">Ceramic coating enquiry</option>
+                  <option value="house">House cleaning enquiry</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom:var(--space-8)">
+                <label class="form-label" for="contact-message">Message *</label>
+                <textarea class="form-textarea" id="contact-message" name="message" placeholder="Tell us how we can help..." style="min-height:10rem" data-validate="required" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg" style="width:100%">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div style="display:flex;flex-direction:column;gap:var(--space-5)">
+
+          <div class="card reveal delay-100" style="padding:var(--space-6)">
+            <h3 style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--space-5)">Quick Contact</h3>
+            <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+              <a href="tel:+254710304055" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);transition:border-color var(--dur-base)">
+                <div style="width:2.5rem;height:2.5rem;background:rgba(26,143,227,0.12);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📞</div>
+                <div>
+                  <div style="font-size:var(--fs-xs);color:var(--clr-text-faint);margin-bottom:2px">Call Us</div>
+                  <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-white)">+254 710 304 055</div>
+                </div>
+              </a>
+              <a href="mailto:hello@washandgo.co.ke" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);transition:border-color var(--dur-base)">
+                <div style="width:2.5rem;height:2.5rem;background:rgba(26,143,227,0.12);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">✉️</div>
+                <div>
+                  <div style="font-size:var(--fs-xs);color:var(--clr-text-faint);margin-bottom:2px">Email Us</div>
+                  <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-white)">hello@washandgo.co.ke</div>
+                </div>
+              </a>
+              <a href="#" data-whatsapp="Hi! I'd like to get in touch with Wash&Go" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.2);border-radius:var(--radius-md);transition:border-color var(--dur-base)">
+                <div style="width:2.5rem;height:2.5rem;background:rgba(37,211,102,0.15);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">💬</div>
+                <div>
+                  <div style="font-size:var(--fs-xs);color:var(--clr-text-faint);margin-bottom:2px">WhatsApp</div>
+                  <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:#4ade80">Fastest Response</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="card reveal delay-200" style="padding:var(--space-6)">
+            <h3 style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--space-4)">Business Hours</h3>
+            <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:var(--fs-sm)">
+              <div style="display:flex;justify-content:space-between;color:var(--clr-text-muted);padding:var(--space-2) 0;border-bottom:1px solid var(--clr-border-light)">
+                <span>Monday – Friday</span><span style="color:var(--clr-white);font-weight:var(--fw-medium)">7 AM – 6 PM</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;color:var(--clr-text-muted);padding:var(--space-2) 0;border-bottom:1px solid var(--clr-border-light)">
+                <span>Saturday</span><span style="color:var(--clr-white);font-weight:var(--fw-medium)">8 AM – 5 PM</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;color:var(--clr-text-muted);padding:var(--space-2) 0">
+                <span>Sunday</span><span style="color:var(--clr-text-faint)">By Appointment</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal delay-300" style="padding:var(--space-6)">
+            <h3 style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--space-4)">Service Area</h3>
+            <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:var(--lh-loose)">We operate across Nairobi and its environs including Westlands, Karen, Kilimani, Lavington, Langata, Runda, Gigiri, and more. Not sure if we cover your area? Just ask!</p>
+            <a href="#" class="btn btn--outline btn--sm" style="margin-top:var(--space-4);width:100%" data-whatsapp="Hi! I'd like to check if you service my area">Check My Area</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__bottom" style="padding-top:0;border-top:none">
+      <p class="footer__copyright">© <span id="year"></span> Wash&Go. All rights reserved.</p>
+      <div class="footer__legal-links">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<a href="#" class="whatsapp-float" data-whatsapp="Hi! I'd like to contact Wash&Go" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="white"/></svg>
+</a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="globals.js"></script>
+</body>
+</html>

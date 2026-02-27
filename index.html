@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wash&Go — Premium mobile car detailing & house cleaning services. We come to you. Book your appointment today." />
+  <meta property="og:title" content="Wash&Go | Mobile Car Detailing & House Cleaning" />
+  <meta property="og:description" content="Professional detailing & cleaning services delivered to your door." />
+  <meta property="og:type" content="website" />
+  <title>Wash&Go | Premium Mobile Car Detailing & House Cleaning</title>
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚿</text></svg>" />
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" aria-hidden="true">
+  <div class="loader-spinner"></div>
+</div>
+
+<!-- ─── Navigation ─── -->
+<header class="nav" role="banner">
+  <div class="container">
+    <nav class="nav__inner" aria-label="Main navigation">
+
+      <a href="index.html" class="nav__logo" aria-label="Wash&Go Home">
+        <!-- SVG Logo -->
+        <svg class="nav__logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="30" cy="30" r="30" fill="#0d6db5"/>
+          <path d="M14 32c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+          <path d="M18 36c2-4 7-6 12-6s10 2 12 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M30 16v-5M20 20l-3-4M40 20l3-4" stroke="#4fb3f7" stroke-width="2" stroke-linecap="round"/>
+          <ellipse cx="30" cy="38" rx="10" ry="5" fill="#1a8fe3" opacity=".4"/>
+          <circle cx="30" cy="38" r="3" fill="white" opacity=".9"/>
+        </svg>
+        Wash<span style="color:var(--clr-accent)">&amp;</span>Go
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link" aria-current="page">Home</a></li>
+        <li class="nav__dropdown">
+          <a href="services.html" class="nav__link">Services ▾</a>
+          <ul class="nav__dropdown-menu" role="list">
+            <li><a href="services.html#car-detailing" class="nav__dropdown-item">🚗 Car Detailing</a></li>
+            <li><a href="house-cleaning.html" class="nav__dropdown-item">🏠 House Cleaning</a></li>
+            <li><a href="pricing.html" class="nav__dropdown-item">💰 Pricing</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="faq.html" class="nav__link">FAQ</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="contact.html" class="btn btn--outline btn--sm">Contact Us</a>
+        <a href="booking.html" class="btn btn--primary btn--sm">Book Now</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav class="nav__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="services.html" class="nav__mobile-link">Car Detailing</a>
+    <a href="house-cleaning.html" class="nav__mobile-link">House Cleaning</a>
+    <a href="pricing.html" class="nav__mobile-link">Pricing</a>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="faq.html" class="nav__mobile-link">FAQ</a>
+    <a href="contact.html" class="nav__mobile-link">Contact</a>
+    <div style="padding-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-3)">
+      <a href="booking.html" class="btn btn--primary btn--lg">Book Now</a>
+      <a href="#" class="btn btn--whatsapp btn--lg" data-whatsapp="Hi! I'd like to book a service with Wash&Go">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ─── Hero ─── -->
+<!-- ─── Hero ─── -->
+<!-- HERO GRID -->
+<section class="hero-grid">
+
+  <div class="left-video">
+    <video autoplay muted loop playsinline>
+      <source src="public/Assets/detail.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="right-grid">
+    <div class="top-video">
+      <video autoplay muted loop playsinline>
+        <source src="public/Assets/vedio3.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="bottom-images">
+      <img src="public/Assets/car2.jpg" alt="Car 1">
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <h1>The Detailing Mafia</h1>
+    <p>Perfection is in the detail</p>
+    <a href="#" class="btn btn--primary btn--sm"><span>Explore Services</span></a>
+  </div>
+
+</section>
+
+<!-- ─── Trust Bar ─── -->
+<!-- <section class="section--sm" style="background:var(--clr-bg-2);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--space-10)">
+      <div style="display:flex;align-items:center;gap:var(--space-3);color:var(--clr-text-muted);font-size:var(--fs-sm)">
+        <span style="font-size:1.5rem">✅</span> Fully Insured
+      </div>
+      <div style="display:flex;align-items:center;gap:var(--space-3);color:var(--clr-text-muted);font-size:var(--fs-sm)">
+        <span style="font-size:1.5rem">🌿</span> Eco-Friendly Products
+      </div>
+      <div style="display:flex;align-items:center;gap:var(--space-3);color:var(--clr-text-muted);font-size:var(--fs-sm)">
+        <span style="font-size:1.5rem">⚡</span> Same-Day Booking
+      </div>
+      <div style="display:flex;align-items:center;gap:var(--space-3);color:var(--clr-text-muted);font-size:var(--fs-sm)">
+        <span style="font-size:1.5rem">🏆</span> 100% Satisfaction Guarantee
+      </div>
+      <div style="display:flex;align-items:center;gap:var(--space-3);color:var(--clr-text-muted);font-size:var(--fs-sm)">
+        <span style="font-size:1.5rem">📍</span> We Come To You
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<div class="header">
+    <h1>Select your vehicle type</h1>
+
+    <!-- Vehicle Buttons -->
+    <div class="vehicle-types">
+        <button class="active" data-vehicle="sedan">Sedan</button>
+        <button data-vehicle="suv">SUV</button>
+        <button data-vehicle="pickup">Pick Up</button>
+        <button data-vehicle="van">Mini Van</button>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-wrapper">
+        <img id="carImage" src="public/Assets/sedan.png" alt="Vehicle Image">
+  
+         <a href="booking.html" class="image-book-btn">Book Now</a>
+    </div>
+
+    <!-- Navigation Buttons -->
+
+    <div class="nav-buttons">
+        <button id="prevCarBtn">⬅ Previous</button>
+        <button id="nextCarBtn">Next ➡</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="packageModal" class="modal">
+    <div class="modal-content" id="modalContent"></div>
+</div>
+
+
+<!-- ─── Services ─── -->
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-intro text-center">
+      <div class="section-label reveal">Our Services</div>
+      <h2 class="section-title reveal delay-100" id="services-title">
+        Everything Clean,<br/><span>Done Right</span>
+      </h2>
+      <p class="section-subtitle reveal delay-200" style="margin-inline:auto">
+        From cars to homes, we deliver professional cleaning and detailing services at your convenience.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 22rem), 1fr));gap:var(--space-6)">
+
+      <!-- Car Detailing -->
+      <article class="service-card reveal" data-category="car">
+        <div class="service-card__icon">🚗</div>
+        <h3 class="service-card__name">Easy Care Detail</h3>
+        <p class="service-card__desc">A gentle mobile clean designed for everyday comfort and convenience. Ideal for families and professionals who want professional car care at their home or workplace.</p>
+        <div class="service-card__meta">
+          <span class="service-card__meta-item">⏱ 1–1.5 hrs</span>
+          <span class="service-card__price">From KES 5,500</span>
+        </div>
+        <div class="service-card__cta">
+          <a href="services.html" class="text-primary text-sm">Learn more →</a>
+          <a href="booking.html?service=easy-care" class="btn btn--primary btn--sm">Book Now</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal delay-100" data-category="car">
+        <div class="service-card__icon">✨</div>
+        <h3 class="service-card__name">Interior &amp; Exterior Detailing</h3>
+        <p class="service-card__desc">A complete inside-and-out clean focused on comfort, freshness, and a well-presented finish. Ideal for vehicles that need a proper refresh without heavy correction.</p>
+        <div class="service-card__meta">
+          <span class="service-card__meta-item">⏱ 2–3 hrs</span>
+          <span class="service-card__price">From KES 10,500</span>
+        </div>
+        <div class="service-card__cta">
+          <a href="services.html" class="text-primary text-sm">Learn more →</a>
+          <a href="booking.html?service=interior-exterior" class="btn btn--primary btn--sm">Book Now</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal delay-200" data-category="car">
+        <div class="service-card__icon">🎨</div>
+        <h3 class="service-card__name">Paint Polishing &amp; Care</h3>
+        <p class="service-card__desc">Gentle polishing designed to enhance shine, smoothness, and overall paint appearance. Perfect for restoring clarity and maintaining a refined exterior finish.</p>
+        <div class="service-card__meta">
+          <span class="service-card__meta-item">⏱ 1.5–2 hrs</span>
+          <span class="service-card__price">From KES 7,000</span>
+        </div>
+        <div class="service-card__cta">
+          <a href="services.html" class="text-primary text-sm">Learn more →</a>
+          <a href="booking.html?service=paint-polish" class="btn btn--primary btn--sm">Book Now</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-category="car">
+        <div class="service-card__icon">📅</div>
+        <h3 class="service-card__name">Monthly Maintenance Package</h3>
+        <p class="service-card__desc">Ongoing care to keep your vehicle consistently clean, comfortable, and well maintained. Designed for families and professionals who prefer regular upkeep without hassle.</p>
+        <div class="service-card__meta">
+          <span class="service-card__meta-item">⏱ 1.5–2 hrs/visit</span>
+          <span class="service-card__price">From KES 12,000</span>
+        </div>
+        <div class="service-card__cta">
+          <a href="services.html" class="text-primary text-sm">Learn more →</a>
+          <a href="booking.html?service=monthly" class="btn btn--primary btn--sm">Book Now</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal delay-100" data-category="car">
+        <div class="service-card__icon">🛡️</div>
+        <h3 class="service-card__name">Ceramic Coating &amp; Paint Protection</h3>
+        <p class="service-card__desc">Durable paint protection that helps keep your vehicle cleaner for longer while reducing daily wear. Ideal for long-term protection and easier maintenance.</p>
+        <div class="service-card__meta">
+          <span class="service-card__meta-item">⏱ Duration varies</span>
+          <span class="service-card__price">From KES 25,000*</span>
+        </div>
+        <div class="service-card__cta">
+          <a href="services.html" class="text-primary text-sm">Learn more →</a>
+          <a href="booking.html?service=ceramic" class="btn btn--primary btn--sm">Book Now</a>
+        </div>
+      </article>
+
+      <article class="service-card reveal delay-200" data-category="house">
+        <div class="service-card__icon">🏠</div>
+        <h3 class="service-card__name">Home Cleaning</h3>
+        <p class="service-card__desc">Thorough, professional home cleaning tailored to your schedule. From regular maintenance to one-off deep cleans — we handle every room with care.</p>
+        <div class="service-card__meta">
+          <span class="service-card__meta-item">⏱ 2–5 hrs</span>
+          <span class="service-card__price">From KES 4,500</span>
+        </div>
+        <div class="service-card__cta">
+          <a href="house-cleaning.html" class="text-primary text-sm">Learn more →</a>
+          <a href="booking.html?service=home-cleaning" class="btn btn--primary btn--sm">Book Now</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="text-center" style="margin-top:var(--space-10)">
+      <a href="services.html" class="btn btn--outline btn--lg">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── How It Works ─── -->
+<section class="section" id="how-it-works" style="background:var(--clr-bg-2)" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-intro text-center">
+      <div class="section-label reveal">Simple Process</div>
+      <h2 class="section-title reveal delay-100" id="how-title">How It <span>Works</span></h2>
+      <p class="section-subtitle reveal delay-200" style="margin-inline:auto">Getting a professional clean has never been easier. Three steps and we handle the rest.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-card__number">1</div>
+        <div class="step-card__icon">📝</div>
+        <h3 class="step-card__title">Book Online or Call</h3>
+        <p class="step-card__desc">Fill in our quick booking form, call us directly, or message us on WhatsApp. Tell us what you need and when.</p>
+      </div>
+      <div class="step-card reveal delay-200">
+        <div class="step-card__number">2</div>
+        <div class="step-card__icon">🗓️</div>
+        <h3 class="step-card__title">Choose Your Service</h3>
+        <p class="step-card__desc">Select from our range of car detailing and house cleaning packages. We'll confirm your slot and send a reminder.</p>
+      </div>
+      <div class="step-card reveal delay-400">
+        <div class="step-card__number">3</div>
+        <div class="step-card__icon">🚚</div>
+        <h3 class="step-card__title">We Come To You</h3>
+        <p class="step-card__desc">Our professional team arrives on time with all equipment. You relax while we deliver a spotless, premium result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Benefits ─── -->
+<section class="section" id="benefits" aria-labelledby="benefits-title">
+  <div class="container">
+    <div class="content-split">
+      <!-- Left: Image/Visual -->
+      <div class="reveal reveal--left" aria-hidden="true">
+        <div style="position:relative;padding:var(--space-6)">
+          <div style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--space-10);text-align:center;position:relative;overflow:hidden">
+            <div style="position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(26,143,227,0.12),transparent 60%)"></div>
+            <div style="font-size:6rem;margin-bottom:var(--space-4)">🚗</div>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center">
+              <span class="badge badge--accent">✓ Eco Products</span>
+              <span class="badge badge--primary">✓ Insured Team</span>
+              <span class="badge badge--success">✓ Guaranteed</span>
+            </div>
+            <!-- Stats overlay card -->
+            <div style="margin-top:var(--space-8);background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:var(--space-5)">
+              <div style="display:flex;justify-content:space-around">
+                <div style="text-align:center">
+                  <div style="font-family:var(--font-display);font-size:var(--fs-2xl);font-weight:var(--fw-black);color:var(--clr-accent)">500+</div>
+                  <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">Cars Detailed</div>
+                </div>
+                <div style="width:1px;background:var(--clr-border)"></div>
+                <div style="text-align:center">
+                  <div style="font-family:var(--font-display);font-size:var(--fs-2xl);font-weight:var(--fw-black);color:var(--clr-accent)">200+</div>
+                  <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">Homes Cleaned</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Benefits list -->
+      <div class="reveal reveal--right">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title" id="benefits-title">Car Care,<br/><span>Without Compromise</span></h2>
+        <div class="benefits-list" role="list">
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-item__icon">🗓️</div>
+            <div>
+              <div class="benefit-item__title">Designed Around Your Schedule</div>
+              <div class="benefit-item__desc">No queues, no waiting. We come to you at your home, office, or anywhere else — at a time that suits you.</div>
+            </div>
+          </div>
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-item__icon">🔍</div>
+            <div>
+              <div class="benefit-item__title">Attention to Detail</div>
+              <div class="benefit-item__desc">We don't cut corners. Every surface, every crevice — cleaned and finished to a consistent, high standard every time.</div>
+            </div>
+          </div>
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-item__icon">🛠️</div>
+            <div>
+              <div class="benefit-item__title">Professional Tools &amp; Products</div>
+              <div class="benefit-item__desc">We use professional-grade, eco-friendly cleaning products and equipment to achieve the best possible results.</div>
+            </div>
+          </div>
+          <div class="benefit-item" role="listitem">
+            <div class="benefit-item__icon">💎</div>
+            <div>
+              <div class="benefit-item__title">Refined Finish, Every Time</div>
+              <div class="benefit-item__desc">Our standards don't vary. Whether it's your first visit or your fiftieth, you get the same exceptional level of care.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Testimonials ─── -->
+<section class="section" style="background:var(--clr-bg-2)" aria-labelledby="testimonials-title">
+  <div class="container">
+    <div class="section-intro text-center">
+      <div class="section-label reveal">Client Reviews</div>
+      <h2 class="section-title reveal delay-100" id="testimonials-title">What Our <span>Clients Say</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 22rem), 1fr));gap:var(--space-6)">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-card__text">"Absolutely incredible service! They came to my office, and by the time I finished my meetings, my car looked brand new. The interior cleaning was particularly impressive."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" aria-hidden="true">AK</div>
+          <div>
+            <div class="testimonial-card__name">Amina Karimi</div>
+            <div class="testimonial-card__role">Business Professional</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal delay-200">
+        <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-card__text">"I booked the monthly maintenance package for my SUV and it's been a game changer. Reliable, professional, and always on time. Highly recommend!"</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" aria-hidden="true">JO</div>
+          <div>
+            <div class="testimonial-card__name">James Otieno</div>
+            <div class="testimonial-card__role">Entrepreneur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal delay-400">
+        <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+        <p class="testimonial-card__text">"Used their home cleaning service — absolutely thorough. Every corner was spotless. The team was professional, friendly, and very respectful of our home."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" aria-hidden="true">FW</div>
+          <div>
+            <div class="testimonial-card__name">Fatuma Wanjiku</div>
+            <div class="testimonial-card__role">Homeowner</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Booking CTA ─── -->
+<section class="section" id="book" aria-labelledby="cta-title">
+  <div class="container container--narrow">
+    <div class="cta-banner reveal">
+      <div class="section-label" style="justify-content:center">Get Started Today</div>
+      <h2 class="cta-banner__title" id="cta-title">Ready for a Clean<br/><span class="gradient-text">That Lasts?</span></h2>
+      <p class="cta-banner__subtitle">Book your appointment in minutes. We'll handle everything else.</p>
+      <div class="cta-banner__actions">
+        <a href="booking.html" class="btn btn--accent btn--lg">Book Now</a>
+        <a href="#" class="btn btn--whatsapp btn--lg" data-whatsapp="Hi! I'd like to book a Wash&Go service">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ─── Footer ─── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <svg width="36" height="36" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="30" cy="30" r="30" fill="#0d6db5"/>
+            <path d="M14 32c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+            <path d="M18 36c2-4 7-6 12-6s10 2 12 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M30 16v-5M20 20l-3-4M40 20l3-4" stroke="#4fb3f7" stroke-width="2" stroke-linecap="round"/>
+            <ellipse cx="30" cy="38" rx="10" ry="5" fill="#1a8fe3" opacity=".4"/>
+            <circle cx="30" cy="38" r="3" fill="white" opacity=".9"/>
+          </svg>
+          Wash<span style="color:var(--clr-accent)">&amp;</span>Go
+        </a>
+        <p class="footer__tagline">Professional mobile car detailing and house cleaning services, delivered to your door.</p>
+        <div class="footer__social" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">Services</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="services.html#easy-care" class="footer__link">Easy Care Detail</a></li>
+          <li><a href="services.html#interior-exterior" class="footer__link">Interior & Exterior</a></li>
+          <li><a href="services.html#paint-polish" class="footer__link">Paint Polishing</a></li>
+          <li><a href="services.html#monthly" class="footer__link">Monthly Package</a></li>
+          <li><a href="services.html#ceramic" class="footer__link">Ceramic Coating</a></li>
+          <li><a href="house-cleaning.html" class="footer__link">House Cleaning</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">Company</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="about.html" class="footer__link">About Us</a></li>
+          <li><a href="pricing.html" class="footer__link">Pricing</a></li>
+          <li><a href="faq.html" class="footer__link">FAQ</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+          <li><a href="booking.html" class="footer__link">Book Now</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">Contact</h3>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📞</span>
+          <a href="tel:+254700000000" class="footer__link">+254 700 000 000</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">✉️</span>
+          <a href="mailto:hello@washandgo.co.ke" class="footer__link">hello@washandgo.co.ke</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📍</span>
+          <span style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Nairobi, Kenya<br/>We travel to you</span>
+        </div>
+        <div style="margin-top:var(--space-4)">
+          <a href="#" class="btn btn--whatsapp btn--sm" data-whatsapp="Hi! I'd like to enquire about Wash&Go services">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© <span id="year"></span> Wash&Go. All rights reserved.</p>
+      <div class="footer__legal-links">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="#" class="whatsapp-float" data-whatsapp="Hi! I'd like to enquire about Wash&Go services" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- Scroll to top -->
+<button id="scroll-top" aria-label="Scroll to top" style="position:fixed;bottom:var(--space-6);right:var(--space-6);z-index:var(--z-toast);width:3rem;height:3rem;background:var(--clr-primary);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-blue);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity var(--dur-base),visibility var(--dur-base),transform var(--dur-base) var(--ease-out);font-size:1.2rem;color:white">↑</button>
+
+<script>
+  // Update year
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Scroll-to-top visibility
+  document.addEventListener('scroll', () => {
+    const btn = document.getElementById('scroll-top');
+    const show = window.scrollY > 600;
+    btn.style.opacity = show ? '1' : '0';
+    btn.style.visibility = show ? 'visible' : 'hidden';
+    btn.style.transform = show ? 'translateY(0)' : 'translateY(10px)';
+  }, { passive: true });
+  document.getElementById('scroll-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+<script src="globals.js"></script>
+</body>
+</html>

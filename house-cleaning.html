@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional mobile house cleaning services by Wash&Go. Standard, deep, move-in/out, and regular maintenance packages." />
+  <title>House Cleaning Services | Wash&Go</title>
+  <link rel="stylesheet" href="globals.css" />
+  <style>
+    .room-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: var(--space-4); }
+    .room-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: var(--space-5); text-align: center; transition: transform var(--dur-base) var(--ease-out), border-color var(--dur-base); }
+    .room-card:hover { transform: translateY(-4px); border-color: rgba(26,143,227,0.3); }
+    .room-card__icon { font-size: 2.5rem; margin-bottom: var(--space-3); }
+    .room-card__name { font-weight: var(--fw-semi); color: var(--clr-white); font-size: var(--fs-sm); }
+  </style>
+</head>
+<body>
+<div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+<header class="nav" role="banner">
+  <div class="container">
+    <nav class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="#0d6db5"/><path d="M14 32c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/><path d="M18 36c2-4 7-6 12-6s10 2 12 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M30 16v-5M20 20l-3-4M40 20l3-4" stroke="#4fb3f7" stroke-width="2" stroke-linecap="round"/><ellipse cx="30" cy="38" rx="10" ry="5" fill="#1a8fe3" opacity=".4"/><circle cx="30" cy="38" r="3" fill="white" opacity=".9"/></svg>
+        Wash<span style="color:var(--clr-accent)">&</span>Go
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Car Detailing</a></li>
+        <li><a href="house-cleaning.html" class="nav__link is-active">House Cleaning</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="faq.html" class="nav__link">FAQ</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__cta"><a href="booking.html" class="btn btn--primary btn--sm">Book Now</a></div>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+  <nav class="nav__mobile-menu" id="mobile-menu">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="services.html" class="nav__mobile-link">Car Detailing</a>
+    <a href="house-cleaning.html" class="nav__mobile-link">House Cleaning</a>
+    <a href="pricing.html" class="nav__mobile-link">Pricing</a>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="faq.html" class="nav__mobile-link">FAQ</a>
+    <a href="contact.html" class="nav__mobile-link">Contact</a>
+    <div style="padding-top:var(--space-6)"><a href="booking.html" class="btn btn--primary btn--lg">Book Now</a></div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="page-hero__breadcrumb-sep">›</span>
+        <span aria-current="page">House Cleaning</span>
+      </nav>
+      <div class="section-label reveal" style="justify-content:center">Home Cleaning Services</div>
+      <h1 class="section-title reveal delay-100" style="text-align:center">Your Home, <span>Spotlessly Clean</span></h1>
+      <p class="section-subtitle reveal delay-200" style="margin-inline:auto;text-align:center">Professional home cleaning services delivered to your door. From regular maintenance to deep cleans and move-in/out services.</p>
+      <div style="display:flex;justify-content:center;gap:var(--space-4);margin-top:var(--space-8)" class="reveal delay-300">
+        <a href="booking.html?service=home-cleaning" class="btn btn--accent btn--lg">Book a Clean</a>
+        <a href="pricing.html" class="btn btn--ghost btn--lg">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 22rem), 1fr));gap:var(--space-6)">
+        <article class="card reveal">
+          <div style="font-size:3rem;margin-bottom:var(--space-4)">🧹</div>
+          <h2 style="font-size:var(--fs-lg);font-weight:var(--fw-black);margin-bottom:var(--space-3)">Standard Clean</h2>
+          <p style="color:var(--clr-text-muted);font-size:var(--fs-sm);line-height:var(--lh-loose);margin-bottom:var(--space-5)">Our regular maintenance clean keeps your home fresh and hygienic. Ideal for weekly or bi-weekly bookings for busy families and professionals.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-5)">
+            <span class="badge badge--primary">⏱ 2–3 hours</span>
+            <span class="badge badge--accent">From KES 4,500</span>
+          </div>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-2);font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--space-6)" role="list">
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Sweep &amp; mop all floors</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Kitchen surfaces &amp; appliances</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Bathroom scrub &amp; disinfect</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Dusting &amp; wiping surfaces</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Rubbish removal</li>
+          </ul>
+          <a href="booking.html?service=standard-clean" class="btn btn--primary" style="width:100%">Book Standard Clean</a>
+        </article>
+
+        <article class="card reveal delay-100" style="border-color:var(--clr-primary);box-shadow:var(--shadow-blue);position:relative">
+          <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--clr-primary),var(--clr-accent));color:white;font-size:var(--fs-xs);font-weight:var(--fw-semi);padding:var(--space-1) var(--space-5);border-radius:0 0 var(--radius-md) var(--radius-md);white-space:nowrap;letter-spacing:0.08em;text-transform:uppercase">Most Popular</div>
+          <div style="font-size:3rem;margin-bottom:var(--space-4);margin-top:var(--space-2)">🧽</div>
+          <h2 style="font-size:var(--fs-lg);font-weight:var(--fw-black);margin-bottom:var(--space-3)">Deep Clean</h2>
+          <p style="color:var(--clr-text-muted);font-size:var(--fs-sm);line-height:var(--lh-loose);margin-bottom:var(--space-5)">A thorough top-to-bottom clean for homes that need a serious refresh. Perfect as a seasonal treatment or after an event.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-5)">
+            <span class="badge badge--primary">⏱ 4–6 hours</span>
+            <span class="badge badge--accent">From KES 8,000</span>
+          </div>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-2);font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--space-6)" role="list">
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Everything in Standard Clean</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Inside cupboards &amp; wardrobes</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Deep oven &amp; fridge clean</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Tile grout scrubbing</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Window sills &amp; frames</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Upholstery wipe-down</li>
+          </ul>
+          <a href="booking.html?service=deep-clean" class="btn btn--primary" style="width:100%">Book Deep Clean</a>
+        </article>
+
+        <article class="card reveal delay-200">
+          <div style="font-size:3rem;margin-bottom:var(--space-4)">📦</div>
+          <h2 style="font-size:var(--fs-lg);font-weight:var(--fw-black);margin-bottom:var(--space-3)">Move In / Out Clean</h2>
+          <p style="color:var(--clr-text-muted);font-size:var(--fs-sm);line-height:var(--lh-loose);margin-bottom:var(--space-5)">Moving to a new place or handing back your current one? We'll ensure it's spotless from top to bottom — ready for the next chapter.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-5)">
+            <span class="badge badge--primary">⏱ 5–8 hours</span>
+            <span class="badge badge--accent">From KES 10,000</span>
+          </div>
+          <ul style="display:flex;flex-direction:column;gap:var(--space-2);font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--space-6)" role="list">
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Everything in Deep Clean</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Wall spot cleaning</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Full window clean inside &amp; out</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Light fixtures &amp; ceiling fans</li>
+            <li style="display:flex;align-items:center;gap:var(--space-2)"><span style="color:var(--clr-accent)">✓</span>Post-clean photo report</li>
+          </ul>
+          <a href="booking.html?service=move-in-out" class="btn btn--primary" style="width:100%">Book Move Clean</a>
+        </article>
+
+        <article class="card reveal" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--space-8); align-items: center">
+          <div>
+            <div style="font-size:3.5rem;margin-bottom:var(--space-4)">🔄</div>
+            <h2 style="font-size:var(--fs-xl);font-weight:var(--fw-black);margin-bottom:var(--space-3)">Regular Maintenance Plan</h2>
+            <p style="color:var(--clr-text-muted);font-size:var(--fs-sm);line-height:var(--lh-loose)">Never think about cleaning again. Set a recurring schedule — weekly, fortnightly, or monthly — and we'll take care of the rest. Priority booking and a dedicated team for consistency.</p>
+            <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6);flex-wrap:wrap">
+              <a href="booking.html?service=regular-maintenance" class="btn btn--primary">Enquire Now</a>
+              <a href="contact.html" class="btn btn--ghost">Get Custom Quote</a>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)">
+            <div style="background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:var(--space-4);text-align:center">
+              <div style="font-size:1.5rem;margin-bottom:var(--space-2)">📆</div>
+              <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-white)">Weekly</div>
+              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">Best freshness</div>
+            </div>
+            <div style="background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:var(--space-4);text-align:center">
+              <div style="font-size:1.5rem;margin-bottom:var(--space-2)">🗓️</div>
+              <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-white)">Fortnightly</div>
+              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">Most popular</div>
+            </div>
+            <div style="background:var(--clr-bg-3);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:var(--space-4);text-align:center">
+              <div style="font-size:1.5rem;margin-bottom:var(--space-2)">📅</div>
+              <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-white)">Monthly</div>
+              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">Deep clean level</div>
+            </div>
+            <div style="background:rgba(26,143,227,0.08);border:1px solid rgba(26,143,227,0.2);border-radius:var(--radius-md);padding:var(--space-4);text-align:center">
+              <div style="font-size:1.5rem;margin-bottom:var(--space-2)">💬</div>
+              <div style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-primary-light)">Custom</div>
+              <div style="font-size:var(--fs-xs);color:var(--clr-text-muted)">We'll tailor it</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms we clean -->
+  <section class="section" style="background:var(--clr-bg-2)">
+    <div class="container">
+      <div class="section-intro text-center">
+        <div class="section-label reveal" style="justify-content:center">Coverage</div>
+        <h2 class="section-title reveal delay-100" style="text-align:center">Every Room, <span>Every Corner</span></h2>
+      </div>
+      <div class="room-grid reveal delay-200">
+        <div class="room-card"><div class="room-card__icon">🛋️</div><div class="room-card__name">Living Room</div></div>
+        <div class="room-card"><div class="room-card__icon">🍳</div><div class="room-card__name">Kitchen</div></div>
+        <div class="room-card"><div class="room-card__icon">🛁</div><div class="room-card__name">Bathrooms</div></div>
+        <div class="room-card"><div class="room-card__icon">🛏️</div><div class="room-card__name">Bedrooms</div></div>
+        <div class="room-card"><div class="room-card__icon">🏢</div><div class="room-card__name">Study / Office</div></div>
+        <div class="room-card"><div class="room-card__icon">🌿</div><div class="room-card__name">Balcony / Patio</div></div>
+        <div class="room-card"><div class="room-card__icon">👗</div><div class="room-card__name">Closets</div></div>
+        <div class="room-card"><div class="room-card__icon">🧺</div><div class="room-card__name">Laundry Room</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section--sm">
+    <div class="container container--narrow">
+      <div class="cta-banner reveal">
+        <h2 class="cta-banner__title">A Cleaner Home <span class="gradient-text">Starts Here</span></h2>
+        <p class="cta-banner__subtitle">Book your first clean today and experience the Wash&Go difference.</p>
+        <div class="cta-banner__actions">
+          <a href="booking.html?service=home-cleaning" class="btn btn--accent btn--lg">Book Now</a>
+          <a href="#" class="btn btn--whatsapp btn--lg" data-whatsapp="Hi! I'd like to book a home cleaning service">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__bottom" style="padding-top:0;border-top:none">
+      <p class="footer__copyright">© <span id="year"></span> Wash&Go. All rights reserved.</p>
+      <div class="footer__legal-links">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<a href="#" class="whatsapp-float" data-whatsapp="Hi! I'd like to book a house cleaning" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="white"/></svg>
+</a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="globals.js"></script>
+</body>
+</html>

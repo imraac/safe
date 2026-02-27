@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your Wash&Go mobile car detailing or house cleaning appointment. Fast, easy, confirmed within 1 hour." />
+  <title>Book Now | Wash&Go</title>
+  <link rel="stylesheet" href="globals.css" />
+</head>
+<body>
+
+<div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+<!-- Nav (same pattern across all pages) -->
+<header class="nav" role="banner">
+  <div class="container">
+    <nav class="nav__inner" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="Wash&Go Home">
+        <svg class="nav__logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="30" cy="30" r="30" fill="#0d6db5"/><path d="M14 32c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/><path d="M18 36c2-4 7-6 12-6s10 2 12 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M30 16v-5M20 20l-3-4M40 20l3-4" stroke="#4fb3f7" stroke-width="2" stroke-linecap="round"/><ellipse cx="30" cy="38" rx="10" ry="5" fill="#1a8fe3" opacity=".4"/><circle cx="30" cy="38" r="3" fill="white" opacity=".9"/>
+        </svg>
+        Wash<span style="color:var(--clr-accent)">&amp;</span>Go
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="house-cleaning.html" class="nav__link">House Cleaning</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="faq.html" class="nav__link">FAQ</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="booking.html" class="btn btn--primary btn--sm is-active">Book Now</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <nav class="nav__mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <a href="services.html" class="nav__mobile-link">Car Detailing</a>
+    <a href="house-cleaning.html" class="nav__mobile-link">House Cleaning</a>
+    <a href="pricing.html" class="nav__mobile-link">Pricing</a>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="faq.html" class="nav__mobile-link">FAQ</a>
+    <a href="contact.html" class="nav__mobile-link">Contact</a>
+    <div style="padding-top:var(--space-6)"><a href="booking.html" class="btn btn--primary btn--lg">Book Now</a></div>
+  </nav>
+</header>
+
+<main>
+  <!-- Page Hero -->
+  <section class="page-hero" aria-labelledby="booking-title">
+    <div class="container">
+      <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="page-hero__breadcrumb-sep">›</span>
+        <span aria-current="page">Book Now</span>
+      </nav>
+      <div class="section-label reveal" style="justify-content:center">Quick &amp; Easy</div>
+      <h1 class="section-title reveal delay-100" id="booking-title">Book Your <span>Appointment</span></h1>
+      <p class="section-subtitle reveal delay-200" style="margin-inline:auto;text-align:center">Fill in the form below and we'll confirm your booking within 1 hour. Alternatively, message us directly on WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="section--sm">
+    <div class="container">
+      <div class="page-grid page-grid--form">
+
+        <!-- Booking Form -->
+        <div class="reveal">
+          <div class="card" style="padding:var(--space-10)">
+            <h2 style="font-size:var(--fs-xl);margin-bottom:var(--space-6)">Your Booking Details</h2>
+
+            <form class="booking-form" novalidate data-redirect="thank-you.html" aria-label="Booking request form">
+
+              <!-- Service Type Tabs -->
+              <div style="margin-bottom:var(--space-6)">
+                <div class="form-label" style="margin-bottom:var(--space-3)">Service Category</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3)" role="group" aria-label="Service category">
+                  <label style="cursor:pointer">
+                    <input type="radio" name="category" value="car" checked style="position:absolute;opacity:0;pointer-events:none" />
+                    <div class="category-btn" style="padding:var(--space-4);background:rgba(26,143,227,0.12);border:2px solid var(--clr-primary);border-radius:var(--radius-md);text-align:center;transition:all var(--dur-base)">
+                      <div style="font-size:1.8rem;margin-bottom:var(--space-2)">🚗</div>
+                      <div style="font-weight:var(--fw-semi);color:var(--clr-white)">Car Detailing</div>
+                    </div>
+                  </label>
+                  <label style="cursor:pointer">
+                    <input type="radio" name="category" value="house" style="position:absolute;opacity:0;pointer-events:none" />
+                    <div class="category-btn" style="padding:var(--space-4);background:var(--clr-bg-3);border:2px solid var(--clr-border);border-radius:var(--radius-md);text-align:center;transition:all var(--dur-base)">
+                      <div style="font-size:1.8rem;margin-bottom:var(--space-2)">🏠</div>
+                      <div style="font-weight:var(--fw-semi);color:var(--clr-text-muted)">House Cleaning</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-grid" style="margin-bottom:var(--space-5)">
+                <div class="form-group">
+                  <label class="form-label" for="first_name">First Name *</label>
+                  <input class="form-input" type="text" id="first_name" name="first_name" placeholder="e.g. Amina" autocomplete="given-name" data-validate="required" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="last_name">Last Name *</label>
+                  <input class="form-input" type="text" id="last_name" name="last_name" placeholder="e.g. Karimi" autocomplete="family-name" data-validate="required" required />
+                </div>
+              </div>
+
+              <div class="form-grid" style="margin-bottom:var(--space-5)">
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" data-validate="required,email" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone Number *</label>
+                  <input class="form-input" type="tel" id="phone" name="phone" placeholder="+254 7XX XXX XXX" autocomplete="tel" data-validate="required,phone" required />
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom:var(--space-5)" id="car-service-group">
+                <label class="form-label" for="service">Service Type *</label>
+                <select class="form-select" id="service" name="service" data-validate="required" required>
+                  <option value="" disabled selected>Select a service…</option>
+                  <optgroup label="Car Detailing">
+                    <option value="easy-care">Easy Care Detail — from KES 5,500</option>
+                    <option value="interior-exterior">Interior &amp; Exterior — from KES 10,500</option>
+                    <option value="paint-polish">Paint Polishing &amp; Care — from KES 7,000</option>
+                    <option value="monthly">Monthly Maintenance — from KES 12,000</option>
+                    <option value="ceramic">Ceramic Coating &amp; Protection — from KES 25,000</option>
+                  </optgroup>
+                  <optgroup label="House Cleaning">
+                    <option value="standard-clean">Standard Home Clean — from KES 4,500</option>
+                    <option value="deep-clean">Deep Clean — from KES 8,000</option>
+                    <option value="move-in-out">Move In/Out Clean — from KES 10,000</option>
+                    <option value="regular-maintenance">Regular Maintenance Plan</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom:var(--space-5)" id="vehicle-type-group">
+                <label class="form-label" for="vehicle_type">Vehicle Type</label>
+                <select class="form-select" id="vehicle_type" name="vehicle_type">
+                  <option value="" disabled selected>Select vehicle type…</option>
+                  <option value="hatchback">Hatchback</option>
+                  <option value="sedan">Sedan</option>
+                  <option value="suv">SUV / 4x4</option>
+                  <option value="van">Van / Minibus</option>
+                  <option value="truck">Truck / Pickup</option>
+                  <option value="trailer">Trailer / Lorry</option>
+                </select>
+              </div>
+
+              <div class="form-grid" style="margin-bottom:var(--space-5)">
+                <div class="form-group">
+                  <label class="form-label" for="date">Preferred Date *</label>
+                  <input class="form-input" type="date" id="date" name="date" data-validate="required" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="time">Preferred Time *</label>
+                  <select class="form-select" id="time" name="time" data-validate="required" required>
+                    <option value="" disabled selected>Select time…</option>
+                    <option value="07:00">7:00 AM</option>
+                    <option value="08:00">8:00 AM</option>
+                    <option value="09:00">9:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="15:00">3:00 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                    <option value="17:00">5:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom:var(--space-5)">
+                <label class="form-label" for="location">Service Location / Address *</label>
+                <input class="form-input" type="text" id="location" name="location" placeholder="e.g. Westlands, Nairobi" data-validate="required" required />
+              </div>
+
+              <div class="form-group" style="margin-bottom:var(--space-8)">
+                <label class="form-label" for="notes">Additional Notes</label>
+                <textarea class="form-textarea" id="notes" name="notes" placeholder="Any special requirements, vehicle details, access instructions…"></textarea>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-6)">
+                <input type="checkbox" id="terms_agree" name="terms_agree" data-validate="required" required style="width:1.2rem;height:1.2rem;accent-color:var(--clr-primary);cursor:pointer;flex-shrink:0" />
+                <label for="terms_agree" style="font-size:var(--fs-sm);color:var(--clr-text-muted);cursor:pointer">
+                  I agree to the <a href="terms.html" style="color:var(--clr-primary-light);text-decoration:underline">Terms of Service</a> and <a href="privacy.html" style="color:var(--clr-primary-light);text-decoration:underline">Privacy Policy</a>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--lg" style="width:100%;font-size:var(--fs-md)">
+                Send Booking Request
+              </button>
+              <p style="font-size:var(--fs-xs);color:var(--clr-text-faint);margin-top:var(--space-3);text-align:center">We'll confirm your booking within 1 hour during business hours</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Summary & Info Sidebar -->
+        <div style="display:flex;flex-direction:column;gap:var(--space-6)">
+
+          <!-- Booking Summary Card -->
+          <div class="card booking-summary reveal delay-200" style="padding:var(--space-6)">
+            <h3 style="font-size:var(--fs-md);font-weight:var(--fw-bold);margin-bottom:var(--space-5)">Booking Summary</h3>
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);color:var(--clr-text-muted)">
+                <span>Service</span>
+                <span id="summary-service" style="color:var(--clr-white);font-weight:var(--fw-medium);text-align:right;max-width:60%">—</span>
+              </div>
+              <div class="divider" style="margin:0"></div>
+              <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);color:var(--clr-text-muted)">
+                <span>Date</span>
+                <span id="summary-date" style="color:var(--clr-white);font-weight:var(--fw-medium);text-align:right">—</span>
+              </div>
+              <div class="divider" style="margin:0"></div>
+              <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);color:var(--clr-text-muted)">
+                <span>Time</span>
+                <span id="summary-time" style="color:var(--clr-white);font-weight:var(--fw-medium)">—</span>
+              </div>
+              <div class="divider" style="margin:0"></div>
+              <div style="display:flex;justify-content:space-between;font-size:var(--fs-sm);color:var(--clr-text-muted)">
+                <span>Vehicle Type</span>
+                <span id="summary-vehicle" style="color:var(--clr-white);font-weight:var(--fw-medium)">—</span>
+              </div>
+            </div>
+            <div style="margin-top:var(--space-5);padding:var(--space-4);background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.15);border-radius:var(--radius-md)">
+              <p style="font-size:var(--fs-xs);color:var(--clr-accent)">ℹ️ Final pricing is confirmed after we review your booking details and vehicle type.</p>
+            </div>
+          </div>
+
+          <!-- WhatsApp Alternative -->
+          <div class="card reveal delay-300" style="text-align:center;padding:var(--space-6)">
+            <div style="font-size:2.5rem;margin-bottom:var(--space-3)">💬</div>
+            <h3 style="font-size:var(--fs-md);margin-bottom:var(--space-2)">Prefer to Chat?</h3>
+            <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--space-5)">Message us directly on WhatsApp for a faster response.</p>
+            <a href="#" class="btn btn--whatsapp" style="width:100%" data-whatsapp="Hi! I'd like to book a Wash&Go service">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <!-- Guarantees -->
+          <div class="card reveal delay-400" style="padding:var(--space-6)">
+            <h3 style="font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-text-muted);margin-bottom:var(--space-4);letter-spacing:0.1em;text-transform:uppercase">Our Promise To You</h3>
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--fs-sm);color:var(--clr-text-muted)"><span style="color:var(--clr-accent)">✓</span> Confirmed within 1 hour</div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--fs-sm);color:var(--clr-text-muted)"><span style="color:var(--clr-accent)">✓</span> On-time arrival guaranteed</div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--fs-sm);color:var(--clr-text-muted)"><span style="color:var(--clr-accent)">✓</span> 100% satisfaction or we redo it</div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--fs-sm);color:var(--clr-text-muted)"><span style="color:var(--clr-accent)">✓</span> No hidden fees</div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--fs-sm);color:var(--clr-text-muted)"><span style="color:var(--clr-accent)">✓</span> Fully insured team</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer (abbreviated for template — include full footer from index.html in production) -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__bottom" style="padding-top:0;border-top:none">
+      <p class="footer__copyright">© <span id="year"></span> Wash&Go. All rights reserved.</p>
+      <div class="footer__legal-links">
+        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="whatsapp-float" data-whatsapp="Hi! I'd like to book a Wash&Go service" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.539 4.09 1.482 5.832L0 24l6.344-1.449A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.594-.476-5.12-1.31l-.366-.216-3.766.861.913-3.655-.241-.378A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Category radio highlight
+  document.querySelectorAll('input[name="category"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.style.background = 'var(--clr-bg-3)';
+        btn.style.borderColor = 'var(--clr-border)';
+        btn.style.color = 'var(--clr-text-muted)';
+        btn.querySelector('div:last-child').style.color = 'var(--clr-text-muted)';
+      });
+      const active = radio.nextElementSibling;
+      active.style.background = 'rgba(26,143,227,0.12)';
+      active.style.borderColor = 'var(--clr-primary)';
+      active.querySelector('div:last-child').style.color = 'var(--clr-white)';
+
+      // Show/hide vehicle type field
+      const vehicleGroup = document.getElementById('vehicle-type-group');
+      vehicleGroup.style.display = radio.value === 'car' ? '' : 'none';
+    });
+  });
+
+  // Booking summary live update
+  ['service','date','time','vehicle_type'].forEach(name => {
+    const el = document.getElementById(name) || document.querySelector(`[name="${name}"]`);
+    if (!el) return;
+    el.addEventListener('change', () => {
+      const map = { service: 'summary-service', date: 'summary-date', time: 'summary-time', vehicle_type: 'summary-vehicle' };
+      const targetEl = document.getElementById(map[name]);
+      if (!targetEl) return;
+      if (name === 'date' && el.value) {
+        targetEl.textContent = new Date(el.value + 'T00:00').toLocaleDateString('en-KE', { weekday:'short', month:'short', day:'numeric', year:'numeric' });
+      } else {
+        const opt = el.options?.[el.selectedIndex];
+        targetEl.textContent = opt ? opt.text : el.value;
+      }
+    });
+  });
+</script>
+<script src="globals.js"></script>
+</body>
+</html>
